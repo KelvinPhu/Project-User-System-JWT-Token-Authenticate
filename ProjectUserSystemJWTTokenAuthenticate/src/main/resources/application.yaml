@@ -1,0 +1,22 @@
+# configuration with application.yml file
+spring:
+  datasource:
+    url: jdbc:sqlserver://THIEN-PHU:1433;databaseName=ProjectUserSystemJWTTokenAuthenticate;encrypt=false
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: 123456789Thien_Phu
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+
+---
+
+kelvin:
+  app:
+    jwtSecret: "======================Kelvin=Spring==========================="
+    jwtExpirationMs: 86400000
